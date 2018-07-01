@@ -57,7 +57,7 @@ namespace FrbaHotel.FrbaHotelModel
                 Usuario user = new Usuario();
                 using (SqlConnection Conexion = BdComun.ObtenerConexion())
                 {
-                    SqlCommand Comando = new SqlCommand(String.Format("DatosUser"), Conexion);
+                    SqlCommand Comando = new SqlCommand(String.Format("pero_compila.DatosUser"), Conexion);
                     SqlDataReader reader = Comando.ExecuteReader();
                     while (reader.Read())
                     {

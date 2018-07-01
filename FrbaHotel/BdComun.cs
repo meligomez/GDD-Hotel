@@ -13,7 +13,7 @@ namespace FrbaHotel
         {
             try
             {
-                SqlConnection Conexion = new SqlConnection(@"Server=LAPTOP-3EPVVMOD\Javi;initial catalog=GD1C2018;Trusted_Connection=True;MultipleActiveResultSets=true");
+                SqlConnection Conexion = new SqlConnection(@"Data source=.;initial catalog=GD1C2018;User id=gdHotel2018; Password=gd2018");
                 Conexion.Open();
                 return Conexion;
             }

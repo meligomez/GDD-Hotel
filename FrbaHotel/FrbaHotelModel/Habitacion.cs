@@ -20,11 +20,14 @@ namespace FrbaHotel.FrbaHotelModel
         public int habitacion_hotel { get; set; }
 
 		//Se mostraran las habitaciones disponibles de un hotel para poder concretar una reserva
-        public List<Habitacion> getHabitacionesDisponibles(Usuario rolUsuario)
+        public List<Habitacion> getHabitacionesDisponibles(Usuario rolUsuario,
+														   string fechaInicio,
+														   int cantDias,
+														   int cantHuesped)
         {
             try
             {
-                if (rolUsuario.rol_nombre != "administrador")
+                if (rolUsuario.rol_nombre == "administrador")
                 {
                     return null;
                 }
@@ -34,11 +37,16 @@ namespace FrbaHotel.FrbaHotelModel
                     SqlCommand Comando = new SqlCommand("[HabitacionesPorHotel]", Conexion);
                     Comando.CommandType = CommandType.StoredProcedure;
                     Comando.Parameters.Add("@hotel_Id", SqlDbType.Int);
+					Comando.Parameters.Add("@fechaInicio", SqlDbType.DateTime);
+					Comando.Parameters.Add("@cantDias", SqlDbType.Int);
+					Comando.Parameters.Add("@cantHuesped", SqlDbType.Int);
 
-                    Comando.UpdatedRowSource = UpdateRowSource.None;
+					Comando.UpdatedRowSource = UpdateRowSource.None;
                     Comando.Parameters[0].Value = rolUsuario.hotel_id;
-
-                    SqlDataReader reader = Comando.ExecuteReader();
+					Comando.Parameters[1].Value = DateTime.Parse(fechaInicio);
+					Comando.Parameters[2].Value = cantDias;
+					Comando.Parameters[3].Value = cantHuesped;
+					SqlDataReader reader = Comando.ExecuteReader();
 
                     while (reader.Read())
                     {

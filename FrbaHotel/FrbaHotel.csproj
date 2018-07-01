@@ -264,6 +264,9 @@
     <EmbeddedResource Include="AbmRegimen\Modificar_regimen.resx">
       <DependentUpon>Modificar_regimen.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="GenerarModificacionReserva\Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GenerarModificacionReserva\GenerarReserva.resx">
       <DependentUpon>GenerarReserva.cs</DependentUpon>
     </EmbeddedResource>

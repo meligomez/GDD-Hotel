@@ -1,6 +1,6 @@
 ﻿namespace FrbaHotel.GenerarModificacionReserva
 {
-    partial class Form1
+    partial class frmListHabitacionesDiponiblesPorHotel
     {
         /// <summary>
         /// Required designer variable.
@@ -28,11 +28,34 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Text = "Form1";
+			this.dgvHabitaciones = new System.Windows.Forms.DataGridView();
+			((System.ComponentModel.ISupportInitialize)(this.dgvHabitaciones)).BeginInit();
+			this.SuspendLayout();
+			// 
+			// dgvHabitaciones
+			// 
+			this.dgvHabitaciones.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+			this.dgvHabitaciones.Location = new System.Drawing.Point(143, 147);
+			this.dgvHabitaciones.Margin = new System.Windows.Forms.Padding(4);
+			this.dgvHabitaciones.Name = "dgvHabitaciones";
+			this.dgvHabitaciones.Size = new System.Drawing.Size(636, 226);
+			this.dgvHabitaciones.TabIndex = 11;
+			// 
+			// frmListHabitacionesDiponiblesPorHotel
+			// 
+			this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+			this.ClientSize = new System.Drawing.Size(907, 428);
+			this.Controls.Add(this.dgvHabitaciones);
+			this.Name = "frmListHabitacionesDiponiblesPorHotel";
+			this.Text = "Habitaciones disponibles";
+			((System.ComponentModel.ISupportInitialize)(this.dgvHabitaciones)).EndInit();
+			this.ResumeLayout(false);
+
         }
 
-        #endregion
-    }
+		#endregion
+
+		private System.Windows.Forms.DataGridView dgvHabitaciones;
+	}
 }

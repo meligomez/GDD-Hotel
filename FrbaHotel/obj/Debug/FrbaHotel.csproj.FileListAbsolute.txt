@@ -40,3 +40,31 @@ D:\DATOS\2018\MELI\TP Gestion de Datos 2018\Tp_GDD_2018_PERO_COMPILA-master\Frba
 D:\DATOS\2018\MELI\TP Gestion de Datos 2018\Tp_GDD_2018_PERO_COMPILA-master\FrbaHotel\obj\Debug\FrbaHotel.GenerarModificacionReserva.ModificarReserva.resources
 D:\DATOS\2018\MELI\TP Gestion de Datos 2018\Tp_GDD_2018_PERO_COMPILA-master\FrbaHotel\obj\Debug\FrbaHotel.csprojAssemblyReference.cache
 D:\DATOS\2018\MELI\TP Gestion de Datos 2018\Tp_GDD_2018_PERO_COMPILA-master\FrbaHotel\obj\Debug\FrbaHotel.GenerarModificacionReserva.SeleccionHabitacionParaReserva.resources
+D:\DATOS\2018\MELI\GDD-Hotel\FrbaHotel\bin\Debug\FrbaHotel.exe.config
+D:\DATOS\2018\MELI\GDD-Hotel\FrbaHotel\bin\Debug\FrbaHotel.exe
+D:\DATOS\2018\MELI\GDD-Hotel\FrbaHotel\bin\Debug\FrbaHotel.pdb
+D:\DATOS\2018\MELI\GDD-Hotel\FrbaHotel\obj\Debug\FrbaHotel.csprojAssemblyReference.cache
+D:\DATOS\2018\MELI\GDD-Hotel\FrbaHotel\obj\Debug\FrbaHotel.AbmCliente.ABM_Cliente.resources
+D:\DATOS\2018\MELI\GDD-Hotel\FrbaHotel\obj\Debug\FrbaHotel.AbmCliente.AgregarCliente.resources
+D:\DATOS\2018\MELI\GDD-Hotel\FrbaHotel\obj\Debug\FrbaHotel.AbmCliente.EliminarCliente.resources
+D:\DATOS\2018\MELI\GDD-Hotel\FrbaHotel\obj\Debug\FrbaHotel.AbmCliente.ModificarCliente.resources
+D:\DATOS\2018\MELI\GDD-Hotel\FrbaHotel\obj\Debug\FrbaHotel.AbmCliente.ModificarClienteElegido.resources
+D:\DATOS\2018\MELI\GDD-Hotel\FrbaHotel\obj\Debug\FrbaHotel.AbmHabitacion.ABM_Habitacion.resources
+D:\DATOS\2018\MELI\GDD-Hotel\FrbaHotel\obj\Debug\FrbaHotel.AbmHabitacion.AgregarHabitacion.resources
+D:\DATOS\2018\MELI\GDD-Hotel\FrbaHotel\obj\Debug\FrbaHotel.AbmHabitacion.EliminarHabitacion.resources
+D:\DATOS\2018\MELI\GDD-Hotel\FrbaHotel\obj\Debug\FrbaHotel.AbmHabitacion.ModificarHabitacion.resources
+D:\DATOS\2018\MELI\GDD-Hotel\FrbaHotel\obj\Debug\FrbaHotel.AbmHabitacion.ModificarHabitacionElegida.resources
+D:\DATOS\2018\MELI\GDD-Hotel\FrbaHotel\obj\Debug\FrbaHotel.AbmHotel.ABM_Hotel.resources
+D:\DATOS\2018\MELI\GDD-Hotel\FrbaHotel\obj\Debug\FrbaHotel.AbmRegimen.ABM_Regimen.resources
+D:\DATOS\2018\MELI\GDD-Hotel\FrbaHotel\obj\Debug\FrbaHotel.AbmRegimen.Agregar_Regimen.resources
+D:\DATOS\2018\MELI\GDD-Hotel\FrbaHotel\obj\Debug\FrbaHotel.AbmRegimen.Listar_Regimen.resources
+D:\DATOS\2018\MELI\GDD-Hotel\FrbaHotel\obj\Debug\FrbaHotel.AbmRegimen.Modificar_regimen.resources
+D:\DATOS\2018\MELI\GDD-Hotel\FrbaHotel\obj\Debug\FrbaHotel.GenerarModificacionReserva.GenerarReserva.resources
+D:\DATOS\2018\MELI\GDD-Hotel\FrbaHotel\obj\Debug\FrbaHotel.GenerarModificacionReserva.ListadoDeReservas.resources
+D:\DATOS\2018\MELI\GDD-Hotel\FrbaHotel\obj\Debug\FrbaHotel.GenerarModificacionReserva.ModificarReserva.resources
+D:\DATOS\2018\MELI\GDD-Hotel\FrbaHotel\obj\Debug\FrbaHotel.GenerarModificacionReserva.SeleccionHabitacionParaReserva.resources
+D:\DATOS\2018\MELI\GDD-Hotel\FrbaHotel\obj\Debug\FrbaHotel.Properties.Resources.resources
+D:\DATOS\2018\MELI\GDD-Hotel\FrbaHotel\obj\Debug\FrbaHotel.csproj.GenerateResource.cache
+D:\DATOS\2018\MELI\GDD-Hotel\FrbaHotel\obj\Debug\FrbaHotel.csproj.CoreCompileInputs.cache
+D:\DATOS\2018\MELI\GDD-Hotel\FrbaHotel\obj\Debug\FrbaHotel.exe
+D:\DATOS\2018\MELI\GDD-Hotel\FrbaHotel\obj\Debug\FrbaHotel.pdb

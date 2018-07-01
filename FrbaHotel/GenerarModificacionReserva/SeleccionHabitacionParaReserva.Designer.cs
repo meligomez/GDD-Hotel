@@ -122,6 +122,7 @@
 			this.Controls.Add(this.fechaInicio);
 			this.Name = "SeleccionHabitacionParaReserva";
 			this.Text = "Seleccion de habitaciones para generar reservas";
+			this.Load += new System.EventHandler(this.SeleccionHabitacionParaReserva_Load);
 			((System.ComponentModel.ISupportInitialize)(this.cantHuespedes)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.cantDias)).EndInit();
 			this.ResumeLayout(false);
