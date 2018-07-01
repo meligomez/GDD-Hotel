@@ -1,0 +1,8 @@
+alter procedure pero_compila.DatosUser
+as
+begin
+select distinct uxh.usuarioXHotel_usuario,rol_nombre,hotel_id from pero_compila.Hotel h join pero_compila.UsuarioXHotel uxh
+on uxh.usuarioXHotel_hotel=hotel_id join pero_compila.RolXUsuario rxu on rxu.rolXUsuario_usuario=uxh.usuarioXHotel_usuario
+join pero_compila.Rol r on r.rol_id=rxu.rolXUsuario_rol
+where hotel_id=1 and uxh.usuarioXHotel_usuario=2
+end
