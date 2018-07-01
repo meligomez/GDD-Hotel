@@ -68,3 +68,4 @@ D:\DATOS\2018\MELI\GDD-Hotel\FrbaHotel\obj\Debug\FrbaHotel.csproj.GenerateResour
 D:\DATOS\2018\MELI\GDD-Hotel\FrbaHotel\obj\Debug\FrbaHotel.csproj.CoreCompileInputs.cache
 D:\DATOS\2018\MELI\GDD-Hotel\FrbaHotel\obj\Debug\FrbaHotel.exe
 D:\DATOS\2018\MELI\GDD-Hotel\FrbaHotel\obj\Debug\FrbaHotel.pdb
+D:\DATOS\2018\MELI\GDD-Hotel\FrbaHotel\obj\Debug\FrbaHotel.GenerarModificacionReserva.frmListHabitacionesDiponiblesPorHotel.resources

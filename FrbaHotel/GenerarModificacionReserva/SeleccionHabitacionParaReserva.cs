@@ -32,7 +32,7 @@ namespace FrbaHotel.GenerarModificacionReserva
 				Habitacion habitacion = new Habitacion();
 				List<Habitacion> habitacions = new List<Habitacion>();
 				
-				habitacions = habitacion.getHabitacionesDisponibles(Usuario.GetUserLogeado(), fechaInicio.Text, cantDias.Text, cantHuespedes.Text);
+				habitacions = habitacion.getHabitacionesDisponibles(Usuario.GetUserLogeado(), fechaInicio.Text, int.Parse(cantDias.Text), int.Parse(cantHuespedes.Text));
 			}
 			catch (Exception ex)
 			{

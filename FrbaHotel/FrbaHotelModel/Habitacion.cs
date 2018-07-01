@@ -34,18 +34,25 @@ namespace FrbaHotel.FrbaHotelModel
                 List<Habitacion> habitaciones = new List<Habitacion>();
                 using (SqlConnection Conexion = BdComun.ObtenerConexion())
                 {
-                    SqlCommand Comando = new SqlCommand("[HabitacionesPorHotel]", Conexion);
+                    SqlCommand Comando = new SqlCommand("pero_compila.HabitacionesPorHotel", Conexion);
                     Comando.CommandType = CommandType.StoredProcedure;
-                    Comando.Parameters.Add("@hotel_Id", SqlDbType.Int);
-					Comando.Parameters.Add("@fechaInicio", SqlDbType.DateTime);
-					Comando.Parameters.Add("@cantDias", SqlDbType.Int);
-					Comando.Parameters.Add("@cantHuesped", SqlDbType.Int);
+					//               Comando.Parameters.Add("@hotel_Id", SqlDbType.Int);
+					//Comando.Parameters.Add("@fechaInicio", SqlDbType.DateTime);
+					//Comando.Parameters.Add("@cantDias", SqlDbType.Int);
+					//Comando.Parameters.Add("@cantHuesped", SqlDbType.Int);
 
-					Comando.UpdatedRowSource = UpdateRowSource.None;
-                    Comando.Parameters[0].Value = rolUsuario.hotel_id;
-					Comando.Parameters[1].Value = DateTime.Parse(fechaInicio);
-					Comando.Parameters[2].Value = cantDias;
-					Comando.Parameters[3].Value = cantHuesped;
+					//Comando.UpdatedRowSource = UpdateRowSource.None;
+					//               Comando.Parameters[0].Value = rolUsuario.hotel_id;
+					//Comando.Parameters[1].Value = DateTime.Parse(fechaInicio);
+					//Comando.Parameters[2].Value = cantDias;
+					//Comando.Parameters[3].Value = cantHuesped;
+					Comando.Parameters.Clear();
+					//comenzamos a mandar cada uno de los parámetros, deben de enviarse en el
+					//tipo de datos que coincida en sql server por ejemplo c# es string en sql server es varchar()
+					Comando.Parameters.AddWithValue("@hotelId", rolUsuario.hotel_id);
+					Comando.Parameters.AddWithValue("@fechaInicio", DateTime.Parse(fechaInicio));
+					Comando.Parameters.AddWithValue("@cantDias", cantDias);
+					Comando.Parameters.AddWithValue("@cantHuesped", cantHuesped);
 					SqlDataReader reader = Comando.ExecuteReader();
 
                     while (reader.Read())
