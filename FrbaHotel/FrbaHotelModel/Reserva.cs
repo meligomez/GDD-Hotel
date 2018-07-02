@@ -23,7 +23,24 @@ namespace FrbaHotel.FrbaHotelModel
         public string reserva_clienteMail { get; set; }
         public int reserva_usuario { get; set; }
         public int reserva_cantHuespedes { get; set; }
+		public Reserva(DateTime reserva_fechaCreacion ,
+			DateTime reserva_fechaInicio ,
+			int reserva_cantDias ,
+			string reserva_tipoHabitacion ,
+			int reserva_tipoRegimen ,
+			decimal reserva_valor ,
+			int reserva_estado ,
+			decimal reserva_clienteIdentificacion ,
+			string reserva_clienteMail ,
+			int reserva_usuario ,
+			int reserva_cantHuespedes)
+		{
+			this.reserva_activa= true;
+		}
+		public Reserva()
+		{
 
+		}
         public List<Reserva> getReservas()
         {
             try

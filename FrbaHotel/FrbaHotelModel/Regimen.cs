@@ -14,7 +14,15 @@ namespace FrbaHotel.FrbaHotelModel
         public String regimen_Descripcion { get; set; }
         public decimal regimen_precioBase { get; set; }
         public bool regimen_estado { get; set; }
-
+		public Regimen()
+		{
+				
+		}
+		public Regimen(int regimenId,string descripcion)
+		{
+			this.regimen_Id = regimen_Id;
+			this.regimen_Descripcion = descripcion;
+		}
         public List<Regimen> getRegimenes(String rolUsuario)
         {   
             try
@@ -53,7 +61,41 @@ namespace FrbaHotel.FrbaHotelModel
             }
             
         }
-        public int addRegimen(Regimen regimen)
+		public List<Regimen> getRegimenes()
+		{
+			try
+			{
+				List<Regimen> regimens = new List<Regimen>();
+				using (SqlConnection Conexion = BdComun.ObtenerConexion())
+				{
+					SqlCommand Comando = new SqlCommand(String.Format("select r.regimen_Id," +
+						"r.regimen_Descripcion,r.regimen_precioBase, r.regimen_estado " +
+						"FROM " +
+						"pero_compila.Regimen r " +
+						"WHERE r.regimen_estado= 1 "), Conexion);
+					SqlDataReader reader = Comando.ExecuteReader();
+
+					while (reader.Read())
+					{
+						Regimen regimen = new Regimen();
+						regimen.regimen_Id = reader.GetInt32(0);
+						regimen.regimen_Descripcion = reader.GetString(1);
+						regimen.regimen_precioBase = reader.GetDecimal(2);
+						regimen.regimen_estado = reader.GetBoolean(3);
+						regimens.Add(regimen);
+					}
+					Conexion.Close();
+				}
+				return regimens;
+
+			}
+			catch (Exception ex)
+			{
+				string msj = ex.Message;
+				throw;
+			}
+		}
+			public int addRegimen(Regimen regimen)
         {
             SqlConnection Conexion = BdComun.ObtenerConexion();
             try

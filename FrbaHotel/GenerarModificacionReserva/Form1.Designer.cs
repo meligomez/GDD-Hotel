@@ -49,6 +49,7 @@
 			this.Controls.Add(this.dgvHabitaciones);
 			this.Name = "frmListHabitacionesDiponiblesPorHotel";
 			this.Text = "Habitaciones disponibles";
+			this.Load += new System.EventHandler(this.frmListHabitacionesDiponiblesPorHotel_Load);
 			((System.ComponentModel.ISupportInitialize)(this.dgvHabitaciones)).EndInit();
 			this.ResumeLayout(false);
 

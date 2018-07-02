@@ -157,6 +157,7 @@
     <Compile Include="FrbaHotelModel\Habitacion.cs" />
     <Compile Include="FrbaHotelModel\Regimen.cs" />
     <Compile Include="FrbaHotelModel\Reserva.cs" />
+    <Compile Include="FrbaHotelModel\ServicioComun.cs" />
     <Compile Include="FrbaHotelModel\Usuario.cs" />
     <Compile Include="GD1C2018DataSet.Designer.cs">
       <AutoGen>True</AutoGen>

@@ -43,7 +43,6 @@ D:\DATOS\2018\MELI\TP Gestion de Datos 2018\Tp_GDD_2018_PERO_COMPILA-master\Frba
 D:\DATOS\2018\MELI\GDD-Hotel\FrbaHotel\bin\Debug\FrbaHotel.exe.config
 D:\DATOS\2018\MELI\GDD-Hotel\FrbaHotel\bin\Debug\FrbaHotel.exe
 D:\DATOS\2018\MELI\GDD-Hotel\FrbaHotel\bin\Debug\FrbaHotel.pdb
-D:\DATOS\2018\MELI\GDD-Hotel\FrbaHotel\obj\Debug\FrbaHotel.csprojAssemblyReference.cache
 D:\DATOS\2018\MELI\GDD-Hotel\FrbaHotel\obj\Debug\FrbaHotel.AbmCliente.ABM_Cliente.resources
 D:\DATOS\2018\MELI\GDD-Hotel\FrbaHotel\obj\Debug\FrbaHotel.AbmCliente.AgregarCliente.resources
 D:\DATOS\2018\MELI\GDD-Hotel\FrbaHotel\obj\Debug\FrbaHotel.AbmCliente.EliminarCliente.resources
@@ -69,3 +68,4 @@ D:\DATOS\2018\MELI\GDD-Hotel\FrbaHotel\obj\Debug\FrbaHotel.csproj.CoreCompileInp
 D:\DATOS\2018\MELI\GDD-Hotel\FrbaHotel\obj\Debug\FrbaHotel.exe
 D:\DATOS\2018\MELI\GDD-Hotel\FrbaHotel\obj\Debug\FrbaHotel.pdb
 D:\DATOS\2018\MELI\GDD-Hotel\FrbaHotel\obj\Debug\FrbaHotel.GenerarModificacionReserva.frmListHabitacionesDiponiblesPorHotel.resources
+D:\DATOS\2018\MELI\GDD-Hotel\FrbaHotel\obj\Debug\FrbaHotel.csprojAssemblyReference.cache

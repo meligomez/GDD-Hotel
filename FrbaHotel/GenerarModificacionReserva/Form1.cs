@@ -1,4 +1,5 @@
-﻿using System;
+﻿using FrbaHotel.FrbaHotelModel;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -11,10 +12,32 @@ using System.Windows.Forms;
 namespace FrbaHotel.GenerarModificacionReserva
 {
     public partial class frmListHabitacionesDiponiblesPorHotel : Form
-    {
-        public frmListHabitacionesDiponiblesPorHotel()
+	{
+		public List<Habitacion> _habitacions { get; set; }
+		public frmListHabitacionesDiponiblesPorHotel()
         {
-            InitializeComponent();
+			InitializeComponent();
         }
-    }
+		public frmListHabitacionesDiponiblesPorHotel(List<Habitacion> habitacions)
+		{
+			this._habitacions = habitacions;
+			InitializeComponent();
+		}
+		private void frmListHabitacionesDiponiblesPorHotel_Load(object sender, EventArgs e)
+		{
+
+		}
+		public void cargarHabitacionesDisponibles() {
+			try
+			{
+				dgvHabitaciones.DataSource = this._habitacions;
+
+			}
+			catch (Exception)
+			{
+
+				throw;
+			}
+		}
+	}
 }
