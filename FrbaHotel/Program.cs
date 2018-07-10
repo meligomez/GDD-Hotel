@@ -20,7 +20,9 @@ namespace FrbaHotel
             //Usuario s = Usuario.Instance;
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new SeleccionHabitacionParaReserva());
-        }
-    }
+			//Application.Run(new SeleccionHabitacionParaReserva());
+			Application.Run(new SeleccionHabitacionParaReserva());
+
+		}
+	}
 }

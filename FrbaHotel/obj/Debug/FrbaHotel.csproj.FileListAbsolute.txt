@@ -61,7 +61,6 @@ D:\DATOS\2018\MELI\GDD-Hotel\FrbaHotel\obj\Debug\FrbaHotel.AbmRegimen.Modificar_
 D:\DATOS\2018\MELI\GDD-Hotel\FrbaHotel\obj\Debug\FrbaHotel.GenerarModificacionReserva.GenerarReserva.resources
 D:\DATOS\2018\MELI\GDD-Hotel\FrbaHotel\obj\Debug\FrbaHotel.GenerarModificacionReserva.ListadoDeReservas.resources
 D:\DATOS\2018\MELI\GDD-Hotel\FrbaHotel\obj\Debug\FrbaHotel.GenerarModificacionReserva.ModificarReserva.resources
-D:\DATOS\2018\MELI\GDD-Hotel\FrbaHotel\obj\Debug\FrbaHotel.GenerarModificacionReserva.SeleccionHabitacionParaReserva.resources
 D:\DATOS\2018\MELI\GDD-Hotel\FrbaHotel\obj\Debug\FrbaHotel.Properties.Resources.resources
 D:\DATOS\2018\MELI\GDD-Hotel\FrbaHotel\obj\Debug\FrbaHotel.csproj.GenerateResource.cache
 D:\DATOS\2018\MELI\GDD-Hotel\FrbaHotel\obj\Debug\FrbaHotel.csproj.CoreCompileInputs.cache
@@ -69,3 +68,5 @@ D:\DATOS\2018\MELI\GDD-Hotel\FrbaHotel\obj\Debug\FrbaHotel.exe
 D:\DATOS\2018\MELI\GDD-Hotel\FrbaHotel\obj\Debug\FrbaHotel.pdb
 D:\DATOS\2018\MELI\GDD-Hotel\FrbaHotel\obj\Debug\FrbaHotel.GenerarModificacionReserva.frmListHabitacionesDiponiblesPorHotel.resources
 D:\DATOS\2018\MELI\GDD-Hotel\FrbaHotel\obj\Debug\FrbaHotel.csprojAssemblyReference.cache
+D:\DATOS\2018\MELI\GDD-Hotel\FrbaHotel\obj\Debug\FrbaHotel.GenerarModificacionReserva.SeleccionHabitacionParaReserva.resources
+D:\DATOS\2018\MELI\GDD-Hotel\FrbaHotel\obj\Debug\FrbaHotel.GenerarModificacionReserva.IniciarReserva.resources

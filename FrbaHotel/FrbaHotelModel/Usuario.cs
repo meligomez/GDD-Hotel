@@ -11,7 +11,9 @@ namespace FrbaHotel.FrbaHotelModel
     {
         public int usuarioXHotel_usuario { get; set; }
         public string rol_nombre { get; set; }
-        public int hotel_id { get; set; }
+		public int rol_id { get; set; }
+		public int hotel_id { get; set; }
+
         private readonly static Usuario _instance = new Usuario();
 
         private Usuario()
@@ -29,18 +31,21 @@ namespace FrbaHotel.FrbaHotelModel
                     {
                         SqlCommand Comando = new SqlCommand(String.Format("pero_compila.DatosUser"), Conexion);
                         SqlDataReader reader = Comando.ExecuteReader();
-                        while (reader.Read())
-                        {
-                            _instance.usuarioXHotel_usuario = reader.GetInt32(0);
-                            _instance.rol_nombre = reader.GetString(1);
-                            _instance.hotel_id = reader.GetInt32(2);
-                            break;
-                        }
-
-                        Conexion.Close();
+						if (reader.HasRows) {
+	                       while (reader.Read())
+							{
+								_instance.usuarioXHotel_usuario = reader.GetInt32(0);
+								_instance.rol_nombre = reader.GetString(1);
+								_instance.rol_id = reader.GetInt32(2);
+								_instance.hotel_id = reader.GetInt32(3);
+								break;
+							}
+							return _instance;
+						}
+						Conexion.Close();
                     }
-                    return _instance;
-                }
+					return null;
+                 }
                 catch (Exception ex)
                 {
                     string msj = ex.Message;
@@ -63,8 +68,10 @@ namespace FrbaHotel.FrbaHotelModel
                     {
                         user.usuarioXHotel_usuario= reader.GetInt32(0);
                         user.rol_nombre = reader.GetString(1);
-                        user.hotel_id = reader.GetInt32(2);
-                        break;
+						_instance.rol_id = reader.GetInt32(2);
+						_instance.hotel_id = reader.GetInt32(3);
+
+						break;
                     }
 
                     Conexion.Close();

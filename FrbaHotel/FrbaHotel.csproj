@@ -153,8 +153,12 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrbaHotelModel\Cliente.cs" />
+    <Compile Include="FrbaHotelModel\DocumentosTipo.cs" />
     <Compile Include="FrbaHotelModel\EstadoReserva.cs" />
     <Compile Include="FrbaHotelModel\Habitacion.cs" />
+    <Compile Include="FrbaHotelModel\HabitacionesDisponibles.cs" />
+    <Compile Include="FrbaHotelModel\Hotel.cs" />
     <Compile Include="FrbaHotelModel\Regimen.cs" />
     <Compile Include="FrbaHotelModel\Reserva.cs" />
     <Compile Include="FrbaHotelModel\ServicioComun.cs" />
@@ -175,6 +179,12 @@
     </Compile>
     <Compile Include="GenerarModificacionReserva\GenerarReserva.Designer.cs">
       <DependentUpon>GenerarReserva.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GenerarModificacionReserva\IniciarReserva.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GenerarModificacionReserva\IniciarReserva.Designer.cs">
+      <DependentUpon>IniciarReserva.cs</DependentUpon>
     </Compile>
     <Compile Include="GenerarModificacionReserva\ListadoDeReservas.cs">
       <SubType>Form</SubType>
@@ -270,6 +280,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GenerarModificacionReserva\GenerarReserva.resx">
       <DependentUpon>GenerarReserva.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GenerarModificacionReserva\IniciarReserva.resx">
+      <DependentUpon>IniciarReserva.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GenerarModificacionReserva\ListadoDeReservas.resx">
       <DependentUpon>ListadoDeReservas.cs</DependentUpon>

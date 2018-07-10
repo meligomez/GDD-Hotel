@@ -14,14 +14,15 @@ namespace FrbaHotel.FrbaHotelModel
         public DateTime reserva_fechaCreacion { get; set; }
         public DateTime reserva_fechaInicio { get; set; }
         public int reserva_cantDias { get; set; }
-        public string reserva_tipoHabitacion { get; set; }
+        public int reserva_tipoHabitacion { get; set; }
         public int reserva_tipoRegimen { get; set; }
         public bool reserva_activa { get; set; }
         public decimal reserva_valor { get; set; }
         public int reserva_estado { get; set; }
         public decimal reserva_clienteIdentificacion { get; set; }
         public string reserva_clienteMail { get; set; }
-        public int reserva_usuario { get; set; }
+		public int reserva_habitacionNro { get; set; }
+		public int reserva_usuario { get; set; }
         public int reserva_cantHuespedes { get; set; }
 		public Reserva(DateTime reserva_fechaCreacion ,
 			DateTime reserva_fechaInicio ,
@@ -80,7 +81,7 @@ namespace FrbaHotel.FrbaHotelModel
             SqlConnection Conexion = BdComun.ObtenerConexion();
             try
             {
-                SqlCommand comando = new SqlCommand("pero_compila.[sp_alta_reserva]", Conexion);
+                SqlCommand comando = new SqlCommand("[pero_compila].[altaReserva]", Conexion);
                 comando.CommandType = CommandType.StoredProcedure;
                 //se limpian los parámetros
                 comando.Parameters.Clear();
@@ -93,12 +94,15 @@ namespace FrbaHotel.FrbaHotelModel
                 comando.Parameters.AddWithValue("@reserva_valor", reserva.reserva_valor);
                 comando.Parameters.AddWithValue("@reserva_clienteIdentificacion", reserva.reserva_clienteIdentificacion);
                 comando.Parameters.AddWithValue("@reserva_clienteMail", reserva.reserva_clienteMail);
-                comando.Parameters.AddWithValue("@reserva_usuario", reserva.reserva_usuario);
+				comando.Parameters.AddWithValue("@reserva_habitacionNro", reserva.reserva_habitacionNro);
+				comando.Parameters.AddWithValue("@reserva_usuario", reserva.reserva_usuario);
                 comando.Parameters.AddWithValue("@reserva_cantHuespedes", reserva.reserva_cantHuespedes);
-                if (comando.ExecuteNonQuery() > 0)
-                {
-                    Conexion.Close();
-                    return 1;
+
+				int id = Convert.ToInt32(comando.ExecuteScalar());
+				if (id > 0)
+				{
+					Conexion.Close();
+                    return id;
                 }
                 else
                 {
