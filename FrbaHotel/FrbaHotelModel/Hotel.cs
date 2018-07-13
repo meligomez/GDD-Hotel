@@ -17,10 +17,10 @@ namespace FrbaHotel.FrbaHotelModel
 		{
 
 		}
-		public Hotel(int id, string nombre)
+		public Hotel(int id, string direccion)
 		{
 			this.hotel_id = id;
-			this.hotel_nombre = nombre;
+			this.hotel_direccion = direccion;
 		}
 		//Se mostraran las habitaciones disponibles de un hotel para poder concretar una reserva
 		public List<Hotel> getHotelesDisponibles()

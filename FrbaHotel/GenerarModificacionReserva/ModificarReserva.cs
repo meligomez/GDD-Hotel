@@ -14,5 +14,20 @@ namespace FrbaHotel.GenerarModificacionReserva
         {
             InitializeComponent();
         }
-    }
+
+		private void labelNroReserva_Click(object sender, EventArgs e)
+		{
+
+		}
+
+		private void labelPersonas_Click(object sender, EventArgs e)
+		{
+
+		}
+
+		private void textNroReserva_TextChanged(object sender, EventArgs e)
+		{
+
+		}
+	}
 }

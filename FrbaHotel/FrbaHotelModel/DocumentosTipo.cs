@@ -35,6 +35,7 @@ namespace FrbaHotel.FrbaHotelModel
 			}
 			catch (Exception ex)
 			{
+				string msje = ex.Message;
 				return null;
 			}
 		}

@@ -61,6 +61,41 @@ namespace FrbaHotel.FrbaHotelModel
             }
             
         }
+		public List<Regimen> getRegimenes(int hotelId)
+		{
+			try
+			{
+				List<Regimen> regimens = new List<Regimen>();
+				using (SqlConnection Conexion = BdComun.ObtenerConexion())
+				{
+					SqlCommand comando = new SqlCommand("pero_compila.getRegimenesPorHotel", Conexion);
+					comando.CommandType = CommandType.StoredProcedure;
+					//se limpian los parámetros
+					comando.Parameters.Clear();
+					//comenzamos a mandar cada uno de los parámetros, deben de enviarse en el
+					//tipo de datos que coincida en sql server por ejemplo c# es string en sql server es varchar()
+					comando.Parameters.AddWithValue("@idHotel", hotelId);
+					SqlDataReader reader = comando.ExecuteReader();
+					while (reader.Read())
+					{
+						Regimen regimen = new Regimen();
+						regimen.regimen_Id = reader.GetInt32(0);
+						regimen.regimen_Descripcion = reader.GetString(1);
+						regimen.regimen_precioBase = reader.GetDecimal(2);
+						regimen.regimen_estado = reader.GetBoolean(3);
+						regimens.Add(regimen);
+					}
+					Conexion.Close();
+				}
+				return regimens;
+
+			}
+			catch (Exception ex)
+			{
+				string msj = ex.Message;
+				throw;
+			}
+		}
 		public List<Regimen> getRegimenes()
 		{
 			try

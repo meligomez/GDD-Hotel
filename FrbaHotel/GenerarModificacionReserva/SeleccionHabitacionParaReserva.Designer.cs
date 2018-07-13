@@ -45,8 +45,10 @@
 			this.lblClienteMail = new System.Windows.Forms.Label();
 			this.txtMailCliente = new System.Windows.Forms.TextBox();
 			this.lblClienteIdentificacion = new System.Windows.Forms.Label();
-			this.txtClienteIdentificacion = new System.Windows.Forms.TextBox();
 			this.pnlConfirmarReserva = new System.Windows.Forms.Panel();
+			this.dgvCliente = new System.Windows.Forms.DataGridView();
+			this.btnRegistrarNuevo = new System.Windows.Forms.Button();
+			this.btnBuscarCliente = new System.Windows.Forms.Button();
 			this.lblTipoIdentificacion = new System.Windows.Forms.Label();
 			this.cbxDocumentosTipo = new System.Windows.Forms.ComboBox();
 			this.txtDescripcion = new System.Windows.Forms.TextBox();
@@ -64,23 +66,24 @@
 			this.pnlListadoHotel = new System.Windows.Forms.Panel();
 			this.lblHotel = new System.Windows.Forms.Label();
 			this.cbxHotel = new System.Windows.Forms.ComboBox();
-			this.btnBuscarCliente = new System.Windows.Forms.Button();
-			this.btnRegistrarNuevo = new System.Windows.Forms.Button();
-			this.dgvCliente = new System.Windows.Forms.DataGridView();
-			this.dataGridViewButtonColumn1 = new System.Windows.Forms.DataGridViewButtonColumn();
+			this.fechaFin = new System.Windows.Forms.DateTimePicker();
+			this.lblFechaFin = new System.Windows.Forms.Label();
+			this.textFecha = new System.Windows.Forms.DateTimePicker();
+			this.lblFechaActual = new System.Windows.Forms.Label();
+			this.txtMaskIdentif = new System.Windows.Forms.MaskedTextBox();
 			((System.ComponentModel.ISupportInitialize)(this.cantHuespedes)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.cantDias)).BeginInit();
 			this.pnlHabitacionesDisponibles.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.dgvHabitaciones)).BeginInit();
 			this.pnlConfirmarReserva.SuspendLayout();
-			this.pnlListadoHotel.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.dgvCliente)).BeginInit();
+			this.pnlListadoHotel.SuspendLayout();
 			this.SuspendLayout();
 			// 
 			// lblFechaInicio
 			// 
 			this.lblFechaInicio.AutoSize = true;
-			this.lblFechaInicio.Location = new System.Drawing.Point(50, 26);
+			this.lblFechaInicio.Location = new System.Drawing.Point(18, 74);
 			this.lblFechaInicio.Name = "lblFechaInicio";
 			this.lblFechaInicio.Size = new System.Drawing.Size(103, 17);
 			this.lblFechaInicio.TabIndex = 3;
@@ -88,7 +91,7 @@
 			// 
 			// fechaInicio
 			// 
-			this.fechaInicio.Location = new System.Drawing.Point(159, 23);
+			this.fechaInicio.Location = new System.Drawing.Point(127, 71);
 			this.fechaInicio.Name = "fechaInicio";
 			this.fechaInicio.Size = new System.Drawing.Size(256, 22);
 			this.fechaInicio.TabIndex = 2;
@@ -96,7 +99,7 @@
 			// label2
 			// 
 			this.label2.AutoSize = true;
-			this.label2.Location = new System.Drawing.Point(50, 70);
+			this.label2.Location = new System.Drawing.Point(18, 124);
 			this.label2.Name = "label2";
 			this.label2.Size = new System.Drawing.Size(158, 17);
 			this.label2.TabIndex = 21;
@@ -104,7 +107,7 @@
 			// 
 			// cantHuespedes
 			// 
-			this.cantHuespedes.Location = new System.Drawing.Point(214, 70);
+			this.cantHuespedes.Location = new System.Drawing.Point(182, 122);
 			this.cantHuespedes.Name = "cantHuespedes";
 			this.cantHuespedes.Size = new System.Drawing.Size(81, 22);
 			this.cantHuespedes.TabIndex = 20;
@@ -117,7 +120,7 @@
 			// lblCantDias
 			// 
 			this.lblCantDias.AutoSize = true;
-			this.lblCantDias.Location = new System.Drawing.Point(446, 28);
+			this.lblCantDias.Location = new System.Drawing.Point(394, 124);
 			this.lblCantDias.Name = "lblCantDias";
 			this.lblCantDias.Size = new System.Drawing.Size(114, 17);
 			this.lblCantDias.TabIndex = 23;
@@ -125,7 +128,7 @@
 			// 
 			// cantDias
 			// 
-			this.cantDias.Location = new System.Drawing.Point(564, 25);
+			this.cantDias.Location = new System.Drawing.Point(514, 119);
 			this.cantDias.Name = "cantDias";
 			this.cantDias.Size = new System.Drawing.Size(120, 22);
 			this.cantDias.TabIndex = 22;
@@ -137,7 +140,7 @@
 			// 
 			// buscarHabitacion
 			// 
-			this.buscarHabitacion.Location = new System.Drawing.Point(467, 87);
+			this.buscarHabitacion.Location = new System.Drawing.Point(547, 165);
 			this.buscarHabitacion.Margin = new System.Windows.Forms.Padding(4);
 			this.buscarHabitacion.Name = "buscarHabitacion";
 			this.buscarHabitacion.Size = new System.Drawing.Size(217, 60);
@@ -152,7 +155,7 @@
 			this.pnlHabitacionesDisponibles.Controls.Add(this.lblTipoRegimenes);
 			this.pnlHabitacionesDisponibles.Controls.Add(this.cbxTipoRegimen);
 			this.pnlHabitacionesDisponibles.Controls.Add(this.lblHabDisponibles);
-			this.pnlHabitacionesDisponibles.Location = new System.Drawing.Point(12, 191);
+			this.pnlHabitacionesDisponibles.Location = new System.Drawing.Point(12, 251);
 			this.pnlHabitacionesDisponibles.Name = "pnlHabitacionesDisponibles";
 			this.pnlHabitacionesDisponibles.Size = new System.Drawing.Size(752, 369);
 			this.pnlHabitacionesDisponibles.TabIndex = 26;
@@ -233,15 +236,9 @@
 			this.lblClienteIdentificacion.TabIndex = 35;
 			this.lblClienteIdentificacion.Text = "Identificacion del cliente";
 			// 
-			// txtClienteIdentificacion
-			// 
-			this.txtClienteIdentificacion.Location = new System.Drawing.Point(189, 317);
-			this.txtClienteIdentificacion.Name = "txtClienteIdentificacion";
-			this.txtClienteIdentificacion.Size = new System.Drawing.Size(206, 22);
-			this.txtClienteIdentificacion.TabIndex = 34;
-			// 
 			// pnlConfirmarReserva
 			// 
+			this.pnlConfirmarReserva.Controls.Add(this.txtMaskIdentif);
 			this.pnlConfirmarReserva.Controls.Add(this.dgvCliente);
 			this.pnlConfirmarReserva.Controls.Add(this.btnRegistrarNuevo);
 			this.pnlConfirmarReserva.Controls.Add(this.btnBuscarCliente);
@@ -253,7 +250,6 @@
 			this.pnlConfirmarReserva.Controls.Add(this.txtNroHabitacion);
 			this.pnlConfirmarReserva.Controls.Add(this.lblClienteIdentificacion);
 			this.pnlConfirmarReserva.Controls.Add(this.txtTipoHabitacion);
-			this.pnlConfirmarReserva.Controls.Add(this.txtClienteIdentificacion);
 			this.pnlConfirmarReserva.Controls.Add(this.lblHabitacionDescripcion);
 			this.pnlConfirmarReserva.Controls.Add(this.lblHabitacionNro);
 			this.pnlConfirmarReserva.Controls.Add(this.lblTipoHabitacion);
@@ -267,6 +263,40 @@
 			this.pnlConfirmarReserva.Name = "pnlConfirmarReserva";
 			this.pnlConfirmarReserva.Size = new System.Drawing.Size(541, 682);
 			this.pnlConfirmarReserva.TabIndex = 33;
+			// 
+			// dgvCliente
+			// 
+			this.dgvCliente.AllowUserToResizeRows = false;
+			this.dgvCliente.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+			this.dgvCliente.Location = new System.Drawing.Point(28, 465);
+			this.dgvCliente.Margin = new System.Windows.Forms.Padding(4);
+			this.dgvCliente.Name = "dgvCliente";
+			this.dgvCliente.Size = new System.Drawing.Size(501, 143);
+			this.dgvCliente.TabIndex = 50;
+			// 
+			// btnRegistrarNuevo
+			// 
+			this.btnRegistrarNuevo.BackColor = System.Drawing.SystemColors.ButtonFace;
+			this.btnRegistrarNuevo.Location = new System.Drawing.Point(277, 397);
+			this.btnRegistrarNuevo.Margin = new System.Windows.Forms.Padding(4);
+			this.btnRegistrarNuevo.Name = "btnRegistrarNuevo";
+			this.btnRegistrarNuevo.Size = new System.Drawing.Size(217, 60);
+			this.btnRegistrarNuevo.TabIndex = 49;
+			this.btnRegistrarNuevo.Text = "Registrar cliente nuevo";
+			this.btnRegistrarNuevo.UseVisualStyleBackColor = false;
+			this.btnRegistrarNuevo.Click += new System.EventHandler(this.btnRegistrarNuevo_Click);
+			// 
+			// btnBuscarCliente
+			// 
+			this.btnBuscarCliente.BackColor = System.Drawing.SystemColors.ButtonFace;
+			this.btnBuscarCliente.Location = new System.Drawing.Point(23, 397);
+			this.btnBuscarCliente.Margin = new System.Windows.Forms.Padding(4);
+			this.btnBuscarCliente.Name = "btnBuscarCliente";
+			this.btnBuscarCliente.Size = new System.Drawing.Size(217, 60);
+			this.btnBuscarCliente.TabIndex = 48;
+			this.btnBuscarCliente.Text = "Buscar cliente";
+			this.btnBuscarCliente.UseVisualStyleBackColor = false;
+			this.btnBuscarCliente.Click += new System.EventHandler(this.btnBuscarCliente_Click);
 			// 
 			// lblTipoIdentificacion
 			// 
@@ -368,7 +398,7 @@
 			// 
 			// btnGenerarReservas
 			// 
-			this.btnGenerarReservas.BackColor = System.Drawing.SystemColors.ButtonShadow;
+			this.btnGenerarReservas.BackColor = System.Drawing.SystemColors.ActiveCaption;
 			this.btnGenerarReservas.Location = new System.Drawing.Point(312, 616);
 			this.btnGenerarReservas.Margin = new System.Windows.Forms.Padding(4);
 			this.btnGenerarReservas.Name = "btnGenerarReservas";
@@ -399,7 +429,7 @@
 			// 
 			this.pnlListadoHotel.Controls.Add(this.lblHotel);
 			this.pnlListadoHotel.Controls.Add(this.cbxHotel);
-			this.pnlListadoHotel.Location = new System.Drawing.Point(53, 107);
+			this.pnlListadoHotel.Location = new System.Drawing.Point(15, 165);
 			this.pnlListadoHotel.Name = "pnlListadoHotel";
 			this.pnlListadoHotel.Size = new System.Drawing.Size(383, 67);
 			this.pnlListadoHotel.TabIndex = 34;
@@ -421,53 +451,60 @@
 			this.cbxHotel.Size = new System.Drawing.Size(206, 24);
 			this.cbxHotel.TabIndex = 36;
 			// 
-			// btnBuscarCliente
+			// fechaFin
 			// 
-			this.btnBuscarCliente.BackColor = System.Drawing.SystemColors.ButtonFace;
-			this.btnBuscarCliente.Location = new System.Drawing.Point(23, 397);
-			this.btnBuscarCliente.Margin = new System.Windows.Forms.Padding(4);
-			this.btnBuscarCliente.Name = "btnBuscarCliente";
-			this.btnBuscarCliente.Size = new System.Drawing.Size(217, 60);
-			this.btnBuscarCliente.TabIndex = 48;
-			this.btnBuscarCliente.Text = "Buscar cliente";
-			this.btnBuscarCliente.UseVisualStyleBackColor = false;
-			this.btnBuscarCliente.Click += new System.EventHandler(this.btnBuscarCliente_Click);
+			this.fechaFin.Location = new System.Drawing.Point(508, 69);
+			this.fechaFin.Name = "fechaFin";
+			this.fechaFin.Size = new System.Drawing.Size(256, 22);
+			this.fechaFin.TabIndex = 35;
 			// 
-			// btnRegistrarNuevo
+			// lblFechaFin
 			// 
-			this.btnRegistrarNuevo.BackColor = System.Drawing.SystemColors.ButtonFace;
-			this.btnRegistrarNuevo.Location = new System.Drawing.Point(277, 397);
-			this.btnRegistrarNuevo.Margin = new System.Windows.Forms.Padding(4);
-			this.btnRegistrarNuevo.Name = "btnRegistrarNuevo";
-			this.btnRegistrarNuevo.Size = new System.Drawing.Size(217, 60);
-			this.btnRegistrarNuevo.TabIndex = 49;
-			this.btnRegistrarNuevo.Text = "Registrar cliente nuevo";
-			this.btnRegistrarNuevo.UseVisualStyleBackColor = false;
-			this.btnRegistrarNuevo.Click += new System.EventHandler(this.btnRegistrarNuevo_Click);
+			this.lblFechaFin.AutoSize = true;
+			this.lblFechaFin.Location = new System.Drawing.Point(416, 74);
+			this.lblFechaFin.Name = "lblFechaFin";
+			this.lblFechaFin.Size = new System.Drawing.Size(86, 17);
+			this.lblFechaFin.TabIndex = 36;
+			this.lblFechaFin.Text = "Fecha de fin";
 			// 
-			// dgvCliente
+			// textFecha
 			// 
-			this.dgvCliente.AllowUserToResizeRows = false;
-			this.dgvCliente.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-			this.dgvCliente.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewButtonColumn1});
-			this.dgvCliente.Location = new System.Drawing.Point(28, 465);
-			this.dgvCliente.Margin = new System.Windows.Forms.Padding(4);
-			this.dgvCliente.Name = "dgvCliente";
-			this.dgvCliente.Size = new System.Drawing.Size(501, 143);
-			this.dgvCliente.TabIndex = 50;
+			this.textFecha.Enabled = false;
+			this.textFecha.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+			this.textFecha.Location = new System.Drawing.Point(150, 37);
+			this.textFecha.Margin = new System.Windows.Forms.Padding(4);
+			this.textFecha.Name = "textFecha";
+			this.textFecha.Size = new System.Drawing.Size(151, 22);
+			this.textFecha.TabIndex = 38;
 			// 
-			// dataGridViewButtonColumn1
+			// lblFechaActual
 			// 
-			this.dataGridViewButtonColumn1.HeaderText = "Seleccion";
-			this.dataGridViewButtonColumn1.Name = "dataGridViewButtonColumn1";
-			this.dataGridViewButtonColumn1.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+			this.lblFechaActual.AutoSize = true;
+			this.lblFechaActual.Location = new System.Drawing.Point(18, 37);
+			this.lblFechaActual.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+			this.lblFechaActual.Name = "lblFechaActual";
+			this.lblFechaActual.Size = new System.Drawing.Size(124, 17);
+			this.lblFechaActual.TabIndex = 37;
+			this.lblFechaActual.Text = "Fecha de reserva*";
+			// 
+			// txtMaskIdentif
+			// 
+			this.txtMaskIdentif.Location = new System.Drawing.Point(189, 317);
+			this.txtMaskIdentif.Mask = "999999999999999999";
+			this.txtMaskIdentif.Name = "txtMaskIdentif";
+			this.txtMaskIdentif.Size = new System.Drawing.Size(209, 22);
+			this.txtMaskIdentif.TabIndex = 51;
+			this.txtMaskIdentif.ValidatingType = typeof(int);
 			// 
 			// SeleccionHabitacionParaReserva
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.ClientSize = new System.Drawing.Size(1333, 701);
+			this.Controls.Add(this.textFecha);
+			this.Controls.Add(this.lblFechaActual);
+			this.Controls.Add(this.lblFechaFin);
+			this.Controls.Add(this.fechaFin);
 			this.Controls.Add(this.pnlListadoHotel);
 			this.Controls.Add(this.pnlConfirmarReserva);
 			this.Controls.Add(this.pnlHabitacionesDisponibles);
@@ -488,9 +525,9 @@
 			((System.ComponentModel.ISupportInitialize)(this.dgvHabitaciones)).EndInit();
 			this.pnlConfirmarReserva.ResumeLayout(false);
 			this.pnlConfirmarReserva.PerformLayout();
+			((System.ComponentModel.ISupportInitialize)(this.dgvCliente)).EndInit();
 			this.pnlListadoHotel.ResumeLayout(false);
 			this.pnlListadoHotel.PerformLayout();
-			((System.ComponentModel.ISupportInitialize)(this.dgvCliente)).EndInit();
 			this.ResumeLayout(false);
 			this.PerformLayout();
 
@@ -515,7 +552,6 @@
 		private System.Windows.Forms.Label lblClienteMail;
 		private System.Windows.Forms.TextBox txtMailCliente;
 		private System.Windows.Forms.Label lblClienteIdentificacion;
-		private System.Windows.Forms.TextBox txtClienteIdentificacion;
 		private System.Windows.Forms.Panel pnlConfirmarReserva;
 		private System.Windows.Forms.TextBox txtDescripcion;
 		private System.Windows.Forms.TextBox txtNroHabitacion;
@@ -537,7 +573,11 @@
 		private System.Windows.Forms.Button btnRegistrarNuevo;
 		private System.Windows.Forms.Button btnBuscarCliente;
 		private System.Windows.Forms.DataGridView dgvCliente;
-		private System.Windows.Forms.DataGridViewButtonColumn dataGridViewButtonColumn1;
+		private System.Windows.Forms.DateTimePicker fechaFin;
+		private System.Windows.Forms.Label lblFechaFin;
 		//private System.Windows.Forms.ToolTip toolTip;
+		private System.Windows.Forms.DateTimePicker textFecha;
+		private System.Windows.Forms.Label lblFechaActual;
+		private System.Windows.Forms.MaskedTextBox txtMaskIdentif;
 	}
 }

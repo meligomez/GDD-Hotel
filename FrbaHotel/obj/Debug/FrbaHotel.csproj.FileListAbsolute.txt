@@ -70,3 +70,4 @@ D:\DATOS\2018\MELI\GDD-Hotel\FrbaHotel\obj\Debug\FrbaHotel.GenerarModificacionRe
 D:\DATOS\2018\MELI\GDD-Hotel\FrbaHotel\obj\Debug\FrbaHotel.csprojAssemblyReference.cache
 D:\DATOS\2018\MELI\GDD-Hotel\FrbaHotel\obj\Debug\FrbaHotel.GenerarModificacionReserva.SeleccionHabitacionParaReserva.resources
 D:\DATOS\2018\MELI\GDD-Hotel\FrbaHotel\obj\Debug\FrbaHotel.GenerarModificacionReserva.IniciarReserva.resources
+D:\DATOS\2018\MELI\GDD-Hotel\FrbaHotel\obj\Debug\FrbaHotel.GenerarModificacionReserva.BuscarReservaAModif.resources
